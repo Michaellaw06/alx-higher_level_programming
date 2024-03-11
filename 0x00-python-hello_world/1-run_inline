@@ -1,0 +1,3 @@
+#!/bin/bash
+PYCODE='print("Michael Lawal!")'
+pthon3 -c "$PYCODE"
