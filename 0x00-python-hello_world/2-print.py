@@ -1,3 +1,3 @@
-# Python script to print a multilingual puzzle statement
+#!/usr/bin/python3
 print("\"Programming is like building a multilingual puzzle")
 
