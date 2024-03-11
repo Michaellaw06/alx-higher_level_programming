@@ -1,4 +1,3 @@
 #!/bin/bash
-PYCODE='print("Hello, world!")'
 python3 -c "$PYCODE"
 
