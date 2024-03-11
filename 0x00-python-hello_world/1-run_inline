@@ -1,2 +1,4 @@
 #!/bin/bash
-pthon3 -c "$PYCODE"
+PYCODE='print("Hello, world!")'
+python3 -c "$PYCODE"
+
