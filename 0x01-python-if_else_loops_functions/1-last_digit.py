@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import random
 
+
 def main():
     number = random.randint(-10000, 10000)
     if number < 0:
@@ -16,6 +17,7 @@ def main():
               .format(number, last_digit))
     else:
         print("Last digit of {:d} is 0 and is 0".format(number))
+
 
 if __name__ == "__main__":
     main()
