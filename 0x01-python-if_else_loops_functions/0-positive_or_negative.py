@@ -1,4 +1,3 @@
-```python
 #!/usr/bin/python3
 import random
 
@@ -16,4 +15,3 @@ def check_number(number):
 if __name__ == "__main__":
     num = generate_number()
     check_number(num)
-```
