@@ -1,1 +1,1 @@
-The code will print `True` because `s1` and `s2` both refer to the same string literal "Best School". In Python, identical string literals are usually stored at the same memory address to optimize memory usage, so `s1` and `s2` point to the same object in memory, making the `is` operator evaluate to `True`.
+True
