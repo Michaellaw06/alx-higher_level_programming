@@ -1,0 +1,1 @@
+The code will print `True` because `l1` and `l2` both contain the same list of elements `[1, 2, 3]`. The equality operator (`==`) checks whether the values of the two lists are the same, and since they are, the comparison evaluates to `True`.
