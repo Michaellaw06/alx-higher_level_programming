@@ -1,1 +1,1 @@
-The code will print `True` because `s1` and `s2` refer to the same string "Best School". Since `s1` and `s2` are the same string, they are equal and therefore `s1 == s2` evaluates to `True`.
+True
