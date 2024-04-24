@@ -1,0 +1,13 @@
+In CPython, Python's implementation, integer caching (interning) is used for integers within a certain range (usually -5 to 256 by default).
+
+Given the script:
+
+```python
+a = 1
+b = 1
+```
+The first line initializes `a` to the integer `1`, and since integer caching is used, the integer object for `1` is either fetched from the cache or created if it wasn't already in the cache.
+
+The second line initializes `b` to the integer `1`. Since integer caching is being used and the integer object for `1` is already cached due to the assignment of `a`, no new `int` object is created for `b`.
+
+Therefore, **0** new `int` objects are created by the execution of the second line of the script.
