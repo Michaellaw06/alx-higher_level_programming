@@ -1,55 +1,64 @@
 #!/usr/bin/python3
+"""Define Square class implement Rectangle
 """
-Defines a Square class.
-"""
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """
-    Represents a square.
-    """
+    """Square class body
+"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """
-        Initializes a new Square.
+        """Initialization class props in constructor
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """Get/set the size of the Square."""
+        """ return width size
+        """
         return self.width
 
     @size.setter
     def size(self, value):
+        """module Square height and width
+        """
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """Square class string
+        """
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
+                                                         self.x,
+                                                         self.y,
+                                                         self.width)
+
     def update(self, *args, **kwargs):
+        """update square props
         """
-        Updates the Square.
-        """
-        if args:
-            attrs = ["id", "size", "x", "y"]
-            for idx, arg in enumerate(args):
-                setattr(self, attrs[idx], arg)
-        elif kwargs:
+        if len(args):
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.size = arg
+                elif i == 2:
+                    self.x = arg
+                elif i == 3:
+                    self.y = arg
+        else:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if hasattr(self, key) is True:
+                    setattr(self, key, value)
 
     def to_dictionary(self):
-        """Returns the dictionary representation of the Square."""
-        square_dict = {
+        """ return dict of class props
+        """
+        return {
             "id": self.id,
-            "size": self.width,
+            "size": self.size,
             "x": self.x,
             "y": self.y
         }
-        return square_dict
-
-    def __str__(self):
-        """Returns the print() and str() representation of a Square."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                 self.width)
-
